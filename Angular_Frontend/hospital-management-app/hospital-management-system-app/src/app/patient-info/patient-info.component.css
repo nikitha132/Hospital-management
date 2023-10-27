@@ -1,0 +1,22 @@
+caption
+{
+caption-side: top;
+font-size: large;
+}
+.container
+{
+    width:30%;
+    position:absolute;
+}
+.border
+{
+    background-color:rgb(222,220,255);
+}
+.body
+{
+    position:relative;
+    background-image: url("https://wallpaperaccess.com/full/7932176.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+}

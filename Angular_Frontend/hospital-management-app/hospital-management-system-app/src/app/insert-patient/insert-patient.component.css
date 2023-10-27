@@ -1,0 +1,35 @@
+select.form-control
+{
+    -webkit-appearance: menulist;
+}
+.border
+{
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-width: 5px !important;
+    border-radius: 20px;
+}
+legend
+{
+    background-color:rgb(80,45,127);
+    color: white;
+    border-radius: 10px;
+}
+.body
+{
+    position:relative;
+    background-image:url("/assets/images/insertPatient.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form-group
+{
+    margin-left: 100px;
+}
+.status
+{
+    display: inline;
+    color:green;
+    margin:4px;
+}

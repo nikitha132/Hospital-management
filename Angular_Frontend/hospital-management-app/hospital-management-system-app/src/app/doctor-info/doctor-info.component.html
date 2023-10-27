@@ -1,0 +1,41 @@
+<div class="body"><br>
+<div class="container">
+    <form ngForm #searchPatient (ngSubmit)="onSubmit()"class="input-group input-group-sm">
+    <div class="input-group-prepend">     
+    <label class="input-group-text" id="inputGroup-sizing-sm">Doctor's Name:</label> 
+    </div>    
+    <select  name="name" id="name" [(ngModel)]="name" class="form-select">
+        <option [value]="" selected disabled>Select Doctor</option>
+        <option *ngFor="let doctor of doctors" value="" [ngValue]="doctor.name">{{doctor.name}}</option>
+    </select>
+    <div class="input-group-append">
+        <button class="btn btn-primary " type="submit">Search</button></div> 
+    </form>
+<br>
+<fieldset *ngIf="doctor;" class="border p-4">
+<table class="table table-borderless">
+    <caption>Doctor</caption>
+        <tr>
+            <th class="col-sm-5">Doc-Id</th>
+            <td><b>:</b>{{doctor.id}}</td>  
+        </tr>
+        <tr>
+            <th class="col-sm-5">Doc-Name</th>
+           <td><b>:</b>{{doctor.name}}</td>   
+        </tr> 
+        <tr>       
+            <th class="col-sm-5">Doc-Age</th>
+            <td><b>:</b>{{doctor.age}}</td>
+        </tr> 
+        <tr>       
+            <th class="col-sm-5">Specialist</th>
+            <td><b>:</b>{{doctor.specialist}}</td>
+        </tr>   
+        <tr>     
+            <th class="col-sm-5">PatientsAttended</th>
+            <td><b>:</b>{{doctor.patientsAttended}}</td>
+        </tr>  
+</table>
+</fieldset><br>
+</div>
+</div>

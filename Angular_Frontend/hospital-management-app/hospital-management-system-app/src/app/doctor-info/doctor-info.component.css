@@ -1,0 +1,26 @@
+caption
+{
+caption-side: top;
+font-size: large;
+}
+.container
+{
+    width:30%;
+    position:absolute;
+}
+.body
+{
+    position:relative;
+    background-image: url("/assets/images/doctor.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+}
+select.form-control
+{
+    -webkit-appearance: menulist;
+}
+.border
+{
+    background-color:rgb(222,220,255);
+}

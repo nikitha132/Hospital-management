@@ -1,0 +1,32 @@
+<div class="body"><br>
+<div class="container">
+    <form ngForm #searchPatient (ngSubmit)="onSubmit()" class="input-group">  
+     <div class="input-group-prepend">       
+    <label class="input-group-text">Patient'sId</label>
+    </div>
+    <input type="number" name="id" id="id" [(ngModel)]="id" class="form-control">
+    <div class="input-group-append">
+    <button class="btn btn-primary" type="submit">Search</button>
+    </div>
+    </form>
+<br>
+<fieldset class="border p-4">
+<table *ngIf="patient;else notpresent" class="table table-borderless">
+    <caption>Patient</caption>
+            <tr>
+                <th class="col-sm-5">Id</th>
+                <td><b>:</b>{{patient.id}}</td>
+            </tr>
+            <tr>    
+                <th class="col-sm-5">Name</th>
+                <td><b>:</b>{{patient.name}}</td>
+            </tr>
+            <tr>    
+                <th class="col-sm-5">Name</th>
+                <td><b>:</b>{{patient.email}}</td>
+            </tr>
+</table>
+<ng-template #notpresent>No Patient</ng-template>
+</fieldset><br>
+</div>
+</div>

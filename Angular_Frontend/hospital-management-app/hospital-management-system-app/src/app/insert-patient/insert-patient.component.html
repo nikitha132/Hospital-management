@@ -1,0 +1,15 @@
+<div class="body"> <br> 
+    <div class="col-md-5 offset-md-6"><br>   
+ <fieldset class="form-group border p-4">  
+     <legend class="float-none w-auto px-2">New Patient</legend>
+     <form #insertPatient="ngForm" (ngSubmit)="onSubmit(insertPatient)">
+        <label class=" col-form-label">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="patient.name"/>
+        <label class=" col-form-label">Email:</label>
+        <input type="text" class="form-control" id="email" name="email" [(ngModel)]="patient.email"/>
+        <button class="btn btn-primary btn-sm" type="submit">SUBMIT</button>
+        <h6 class="status" *ngIf="submitted;">submitted</h6>
+     </form>
+</fieldset><br>
+</div><br>
+</div>
