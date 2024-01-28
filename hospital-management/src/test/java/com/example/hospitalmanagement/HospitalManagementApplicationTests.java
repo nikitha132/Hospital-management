@@ -33,10 +33,8 @@ class HospitalManagementApplicationTests {
 	{
 		Patient p=new Patient();
 		p.setName("Surya");
-		SimpleDateFormat formatter= new SimpleDateFormat("dd-MM-yyyy");
-		p.setDateOfVisit(formatter.parse("09-09-2001"));
-		p.setVisitedDoctor("Dr.Anna");
-		p.setPrescription("Antihistamine");
+		p.setEmail("Surya@gmail.com");
+		p.setContact(9381202121L);
 		assertNotNull(p_repo.save(p));
 	}	
 	

@@ -1,12 +1,13 @@
 package com.example.hospitalmanagement.model;
-
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+
 
 @Entity
 @Table(name="patients")
@@ -15,16 +16,15 @@ public class Patient {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String name;
-	private String visitedDoctor;
-	private Date dateOfVisit;
-	private String prescription;
-	
-	public String getPrescription() {
-		return prescription;
+	private String email;
+	private String contact;
+
+	public String getContact() {
+		return contact;
 	}
 
-	public void setPrescription(String prescription) {
-		this.prescription = prescription;
+	public void setContact(String contact) {
+		this.contact = contact;
 	}
 
 	public Patient(){}
@@ -44,38 +44,30 @@ public class Patient {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
 
-	public String getVisitedDoctor() {
-		return visitedDoctor;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setVisitedDoctor(String visitedDoctor) {
-		this.visitedDoctor = visitedDoctor;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public Date getDateOfVisit() {
-		return dateOfVisit;
-	}
+	
 
-	public void setDateOfVisit(Date dateOfVisit) {
-		this.dateOfVisit = dateOfVisit;
-	}
-
-	public Patient(String name, String visitedDoctor, Date dateOfVisit, String prescription) {
+	public Patient(int id, String name, String email, String contact) {
 		super();
+		this.id = id;
 		this.name = name;
-		this.visitedDoctor = visitedDoctor;
-		this.dateOfVisit = dateOfVisit;
-		this.prescription = prescription;
+		this.email = email;
+		this.contact = contact;
 	}
 
 	@Override
 	public String toString() {
-		return "Patient [id=" + id + ", name=" + name + ", visitedDoctor=" + visitedDoctor + ", dateOfVisit="
-				+ dateOfVisit + ", prescription=" + prescription + "]";
+		return "Patient [id=" + id + ", name=" + name + ", email=" + email + "]";
 	}
-
-	
 	
 
 }
